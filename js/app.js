@@ -53,7 +53,7 @@ addBtn.addEventListener("click", (e) => {
     notesTitle = JSON.parse(title);
   }
 
-  if (title.value != null || notes.value != null) {
+  if (addTxt.value != "" && addTitle.value != "") {
     notesObj.push(addTxt.value);
     notesTitle.push(addTitle.value);
     localStorage.setItem("notes", JSON.stringify(notesObj));
@@ -61,7 +61,7 @@ addBtn.addEventListener("click", (e) => {
     addTxt.value = "";
     addTitle.value = "";
   } else {
-    alert("Either of the fields is not filled.");
+    alert("Either of the fields is empty.");
     addTxt.value = "";
     addTitle.value = "";
   }
